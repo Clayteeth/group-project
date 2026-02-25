@@ -119,6 +119,79 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &35816787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
+  m_PrefabInstance: {fileID: 1443502612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &35816788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35816787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83b7f215b8800b4996b7f9b5f8f37c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::wiggling
+  degreesPerSecond: 50
+--- !u!114 &35816789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35816787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370a2e7882febb448b2fb5a96c6ff5ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::goalRock
+  rock: {fileID: 777710162}
+--- !u!65 &35816790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35816787}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 101.1, y: 99.8, z: 115.49}
+  m_Center: {x: 5.4, y: 32.8, z: 0}
+--- !u!4 &35816791 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
+  m_PrefabInstance: {fileID: 1443502612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &35816792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35816787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371f7657433eb6340a0c6ef38d110ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::winning
+  rock: {fileID: 777710164}
+  goalRock: {fileID: 35816791}
+  winDistanceVariable: 20
+  thisGuyFucks: 0
 --- !u!1001 &777710161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190,8 +263,109 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777710163}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777710168}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777710167}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777710166}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777710165}
   m_SourcePrefab: {fileID: 100100000, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+--- !u!1 &777710162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+  m_PrefabInstance: {fileID: 777710161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &777710163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777710162}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 41.62, y: 39.93, z: 35.89}
+  m_Center: {x: -1.86, y: 19.47, z: 0}
+--- !u!4 &777710164 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+  m_PrefabInstance: {fileID: 777710161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &777710165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777710162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b5f544bb7de134f915ff0c9ccbe8e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::moving
+  moveSpeedVariable: 5
+--- !u!114 &777710166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777710162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbc95c6cd4c37e459525081cbf1c971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::wasd
+  secondMoveSpeedQuestionMark: 5
+--- !u!114 &777710167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777710162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371f7657433eb6340a0c6ef38d110ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::winning
+  rock: {fileID: 777710164}
+  goalRock: {fileID: 35816791}
+  winDistanceVariable: 20
+  thisGuyFucks: 0
+--- !u!114 &777710168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777710162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38634ba95e35bd47915822cbbdf6cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::playerRock
+  goalRock: {fileID: 35816787}
 --- !u!1 &955288158
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +626,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 35816790}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 35816789}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 35816788}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 35816792}
   m_SourcePrefab: {fileID: 100100000, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
 --- !u!1 &2097466332
 GameObject:
