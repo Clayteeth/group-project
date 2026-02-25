@@ -204,13 +204,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612580746}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 34.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &814997447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -280,6 +280,8 @@ GameObject:
   - component: {fileID: 1182970942}
   - component: {fileID: 1182970941}
   - component: {fileID: 1182970940}
+  - component: {fileID: 1182970944}
+  - component: {fileID: 1182970945}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -380,6 +382,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1182970944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182970939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51cdb9c7300e44a4c80c768558028793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Winner
+  player: {fileID: 0}
+  goal: {fileID: 0}
+  winDistance: 1.5
+--- !u!114 &1182970945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182970939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51cdb9c7300e44a4c80c768558028793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Winner
+  player: {fileID: 0}
+  goal: {fileID: 0}
+  winDistance: 1.5
 --- !u!1 &1387311443
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,8 +521,9 @@ GameObject:
   - component: {fileID: 1527686696}
   - component: {fileID: 1527686695}
   - component: {fileID: 1527686694}
+  - component: {fileID: 1527686698}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,6 +622,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1527686698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527686693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a951914f829f342a47fe4bcdef81e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  moveSpeed: 5
+  testValue: 168
 --- !u!1 &1978476967
 GameObject:
   m_ObjectHideFlags: 0
