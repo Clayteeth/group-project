@@ -176,7 +176,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
   m_PrefabInstance: {fileID: 1443502612}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &35816792
+--- !u!114 &35816793
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,13 +185,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 35816787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371f7657433eb6340a0c6ef38d110ec8, type: 3}
+  m_Script: {fileID: 11500000, guid: 51cdb9c7300e44a4c80c768558028793, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::winning
-  rock: {fileID: 777710164}
-  goalRock: {fileID: 35816791}
-  winDistanceVariable: 20
-  thisGuyFucks: 0
+  m_EditorClassIdentifier: Assembly-CSharp::Winner
+  player: {fileID: 777710164}
+  goal: {fileID: 35816791}
+  winDistance: 1.5
+--- !u!54 &35816794
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35816787}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &777710161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218,7 +244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.62
+      value: 2.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -272,13 +298,16 @@ PrefabInstance:
       addedObject: {fileID: 777710168}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 777710167}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 777710166}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 777710165}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777710169}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777710170}
   m_SourcePrefab: {fileID: 100100000, guid: bb73e30a45e82e34d90814c45cc6c3fb, type: 3}
 --- !u!1 &777710162 stripped
 GameObject:
@@ -337,22 +366,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::wasd
   secondMoveSpeedQuestionMark: 5
---- !u!114 &777710167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777710162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371f7657433eb6340a0c6ef38d110ec8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::winning
-  rock: {fileID: 777710164}
-  goalRock: {fileID: 35816791}
-  winDistanceVariable: 20
-  thisGuyFucks: 0
 --- !u!114 &777710168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +379,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerRock
   goalRock: {fileID: 35816787}
+--- !u!114 &777710169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777710162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51cdb9c7300e44a4c80c768558028793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Winner
+  player: {fileID: 777710164}
+  goal: {fileID: 35816791}
+  winDistance: 1.5
+--- !u!54 &777710170
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777710162}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &955288158
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,13 +506,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955288158}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.120329574, y: -0, z: -0, w: 0.992734}
+  m_LocalPosition: {x: 0, y: 13.57, z: -49.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.822, y: 0, z: 0}
 --- !u!1 &1112630065
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +693,10 @@ PrefabInstance:
       addedObject: {fileID: 35816788}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 35816792}
+      addedObject: {fileID: 35816793}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 35816794}
   m_SourcePrefab: {fileID: 100100000, guid: e39ea0a899d14d542a6cdcab97a1be23, type: 3}
 --- !u!1 &2097466332
 GameObject:
@@ -652,6 +710,7 @@ GameObject:
   - component: {fileID: 2097466335}
   - component: {fileID: 2097466334}
   - component: {fileID: 2097466333}
+  - component: {fileID: 2097466337}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -675,10 +734,10 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1.53, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2097466334
 MeshRenderer:
@@ -752,6 +811,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &2097466337
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097466332}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

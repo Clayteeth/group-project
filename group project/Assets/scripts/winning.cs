@@ -9,7 +9,7 @@ public class winning : MonoBehaviour
     }
     public Transform rock;
     public Transform goalRock;
-    public float winDistanceVariable = 20.0f;
+    public float winDistanceVariable = 1.0f;
 
     public bool thisGuyFucks = false;
 
