@@ -529,8 +529,8 @@ GameObject:
   - component: {fileID: 1182970942}
   - component: {fileID: 1182970941}
   - component: {fileID: 1182970940}
-  - component: {fileID: 1182970945}
   - component: {fileID: 1182970946}
+  - component: {fileID: 1182970947}
   m_Layer: 0
   m_Name: goal
   m_TagString: Untagged
@@ -631,21 +631,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1182970945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182970939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51cdb9c7300e44a4c80c768558028793, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Winner
-  player: {fileID: 1527686697}
-  goal: {fileID: 1182970943}
-  winDistance: 1.5
 --- !u!114 &1182970946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +644,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::wiggling
   degreesPerSecond: 50
+--- !u!114 &1182970947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182970939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7620f7120a30334eb765f638cee506b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinSceneTransition
+  player: {fileID: 1527686697}
+  goal: {fileID: 1182970943}
+  winDistance: 2.12
 --- !u!1 &1213640860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6625625089528971671, guid: f435838a8e1ba17459b81cb7767f493c, type: 3}

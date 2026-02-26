@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Tate.unity
+    guid: 697eef72c6171b24ba37795358b6e683
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: ed20a65cb6ecce64cab430eaa15b12f4
+  - enabled: 1
+    path: Assets/Scenes/clays area.unity
+    guid: cfed987a0c83ab649a9d455e9533f4eb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
