@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class Winner : MonoBehaviour
 {
     public Transform player;
     public Transform goal;
     public float winDistance = 1.5f;
-    private bool hasWon = false;
+    public static bool hasWon = false;
     void Update()
     {
         if (hasWon) return;
@@ -18,5 +19,6 @@ public class Winner : MonoBehaviour
     void WinGame()
     {
         Debug.Log("You Win!");
+        SceneManager.LoadScene("EndScreen");
     }
 }
