@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeathScreen.unity
     guid: 606c85ae37b35294f9b63ac642d235a0
+  - enabled: 1
+    path: Assets/Scenes/Finger.unity
+    guid: 75d5cba3287ccca4a843ad09d61ff250
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0

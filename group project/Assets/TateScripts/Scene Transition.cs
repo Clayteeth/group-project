@@ -10,4 +10,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void LoadFfinger()
+    {
+        SceneManager.LoadScene("Finger");
+    }
 }
